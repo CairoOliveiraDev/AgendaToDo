@@ -17,6 +17,12 @@
 		0E9D29892755CE9A00B0E48F /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D29882755CE9A00B0E48F /* Tarefa.swift */; };
 		0E9D298B2755CFB300B0E48F /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D298A2755CFB300B0E48F /* Categoria.swift */; };
 		0E9D298E2755D40400B0E48F /* TarefaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D298D2755D40400B0E48F /* TarefaTableViewCell.swift */; };
+		0E9D2990275855B600B0E48F /* NovaTarefaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D298F275855B600B0E48F /* NovaTarefaTableViewController.swift */; };
+		0E9D2992275857E500B0E48F /* TarefaDescricaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D2991275857E500B0E48F /* TarefaDescricaoTableViewCell.swift */; };
+		0E9D29942758580600B0E48F /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D29932758580600B0E48F /* DataTableViewCell.swift */; };
+		0E9D299627592ECF00B0E48F /* CategoriaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D299527592ECE00B0E48F /* CategoriaTableViewController.swift */; };
+		0E9D299927592FCC00B0E48F /* CategoriaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D299827592FCC00B0E48F /* CategoriaRepository.swift */; };
+		0E9D299B275936F800B0E48F /* TarefaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9D299A275936F800B0E48F /* TarefaRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		0E9D29882755CE9A00B0E48F /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		0E9D298A2755CFB300B0E48F /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		0E9D298D2755D40400B0E48F /* TarefaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaTableViewCell.swift; sourceTree = "<group>"; };
+		0E9D298F275855B600B0E48F /* NovaTarefaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaTarefaTableViewController.swift; sourceTree = "<group>"; };
+		0E9D2991275857E500B0E48F /* TarefaDescricaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaDescricaoTableViewCell.swift; sourceTree = "<group>"; };
+		0E9D29932758580600B0E48F /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		0E9D299527592ECE00B0E48F /* CategoriaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaTableViewController.swift; sourceTree = "<group>"; };
+		0E9D299827592FCC00B0E48F /* CategoriaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaRepository.swift; sourceTree = "<group>"; };
+		0E9D299A275936F800B0E48F /* TarefaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 		0E9D296C2755546600B0E48F /* AgendaToDo */ = {
 			isa = PBXGroup;
 			children = (
+				0E9D299727592F9600B0E48F /* Repositories */,
 				0E9D29872755CDEE00B0E48F /* Models */,
 				0E9D2984275555A500B0E48F /* Controllers */,
 				0E9D296D2755546600B0E48F /* AppDelegate.swift */,
@@ -82,6 +95,7 @@
 			children = (
 				0E9D298C2755D3E000B0E48F /* Cells */,
 				0E9D2985275555FB00B0E48F /* TarefasTableViewController.swift */,
+				0E9D299527592ECE00B0E48F /* CategoriaTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,8 +113,20 @@
 			isa = PBXGroup;
 			children = (
 				0E9D298D2755D40400B0E48F /* TarefaTableViewCell.swift */,
+				0E9D298F275855B600B0E48F /* NovaTarefaTableViewController.swift */,
+				0E9D2991275857E500B0E48F /* TarefaDescricaoTableViewCell.swift */,
+				0E9D29932758580600B0E48F /* DataTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0E9D299727592F9600B0E48F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0E9D299827592FCC00B0E48F /* CategoriaRepository.swift */,
+				0E9D299A275936F800B0E48F /* TarefaRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,13 +200,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9D2992275857E500B0E48F /* TarefaDescricaoTableViewCell.swift in Sources */,
 				0E9D29892755CE9A00B0E48F /* Tarefa.swift in Sources */,
 				0E9D2986275555FB00B0E48F /* TarefasTableViewController.swift in Sources */,
 				0E9D29782755546600B0E48F /* AgendaToDo.xcdatamodeld in Sources */,
+				0E9D299B275936F800B0E48F /* TarefaRepository.swift in Sources */,
 				0E9D296E2755546600B0E48F /* AppDelegate.swift in Sources */,
+				0E9D2990275855B600B0E48F /* NovaTarefaTableViewController.swift in Sources */,
 				0E9D29702755546600B0E48F /* SceneDelegate.swift in Sources */,
+				0E9D29942758580600B0E48F /* DataTableViewCell.swift in Sources */,
 				0E9D298E2755D40400B0E48F /* TarefaTableViewCell.swift in Sources */,
+				0E9D299627592ECF00B0E48F /* CategoriaTableViewController.swift in Sources */,
 				0E9D298B2755CFB300B0E48F /* Categoria.swift in Sources */,
+				0E9D299927592FCC00B0E48F /* CategoriaRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

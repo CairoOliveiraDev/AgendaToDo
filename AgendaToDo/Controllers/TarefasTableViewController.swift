@@ -7,21 +7,23 @@
 
 import UIKit
 
-let trabalho = Categoria(nome: "Trabalho", color: UIColor.green)
-let estudo = Categoria(nome: "Estudo", color: UIColor.blue)
 
-let tarefas: [Tarefa] = [
-    Tarefa(nome: "Tomar a segunda dose da vacina", data: Date(), categoria: trabalho),
-    Tarefa(nome: "Marcar uma tattoo", data: Date(), categoria: estudo),
-    Tarefa(nome: "Marcar uma tattosdjfaskjfnelkjfelkfhewjfnqwelkjrewnjflwekjfnwemnmjfkwnekjfnweo", data: Date(), categoria: estudo)
-]
 
 class TarefasTableViewController: UITableViewController {
     
     private var dataFormat: DateFormatter = DateFormatter()
+    private var tarefas: [Tarefa] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.tarefas = TarefaRepository.instance.getTarefas()
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
